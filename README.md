@@ -11,3 +11,7 @@ A simple command-line utility to format JSON and YAML files using Python and Typ
 ## Installation
 ```bash
 pip install .
+```
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
