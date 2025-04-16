@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import typer
 from rich.console import Console
 from rich.panel import Panel
@@ -24,6 +25,9 @@ def get_file_name(filepath: str):
 def create_dir(filepath: str):
     if not os.path.exists(filepath):
         os.makedirs(filepath)
+
+def get_path(path: str):
+    return Path(path)
 
 def join_paths(base_path: str, sub_path: str):
     return os.path.join(base_path, sub_path)
