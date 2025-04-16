@@ -1,0 +1,18 @@
+[project]
+name = "formatter-project"
+version = "0.1.0"
+description = "A CLI tool to format JSON and YAML."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "typer[all]",
+    "rich",
+    "pyyaml"
+]
+
+[project.scripts]
+formatter = "formatter.main:app"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
