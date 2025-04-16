@@ -1,6 +1,13 @@
+from formatter.logger import get_logger
 from formatter.main import process_file
 
-def test_case():
-    input = ".\\tests\\test.json"
+log = get_logger("Test", True)
 
-    process_file(input)
+def test_case():
+    input_json = ".\\tests\\test.json"
+    input_yaml = ".\\tests\\test.yaml"
+
+    log.info("Formatting started")
+
+    process_file(input_json)
+    process_file(input_yaml)
