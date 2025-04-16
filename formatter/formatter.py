@@ -13,9 +13,7 @@ def format_json(filepath: str):
     output = join_paths(output, "output")
     create_dir(output)
     
-    print(output)
     output = join_paths(output, get_file_name(filepath) + "_formatted.json")
-    print(output)
 
     with open(output, "w", encoding="utf-8") as file:
         file.write(json.dumps(content, indent=4, separators=(default_comma, default_colon)))
@@ -23,4 +21,19 @@ def format_json(filepath: str):
     return True
 
 def format_yaml(filepath: str):
+    with open(filepath, "r", encoding="UTF-8") as file:
+        content = yaml.safe_load(file.read())
+
+    print(content)
+
+    output = get_dir_path(filepath)
+    output = join_paths(output, "output")
+    create_dir(output)
+
+    output = join_paths(output, get_file_name(filepath) + "_formatted.yaml")
+
+    with open(output, "w", encoding="utf-8") as file:
+        file.write(yaml.dump(content))
+
+    
     return True
