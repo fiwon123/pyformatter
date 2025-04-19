@@ -12,8 +12,9 @@ def format(filepath: str = typer.Argument(..., help="Path to the file to format.
            dry_run:bool = typer.Option(False, "--dry-run", help="Show a preview in the CLI without generate an output file."),
            in_place:bool = typer.Option(False, "--in-place", help="Overwrite the current file with the output."),
            file_type:str = typer.Option(None, "--type", "-t", help="Explicitly set file type in lowercase (example: 'json', 'yaml', ...)."),
+           dir_output:str = typer.Option(None, "--output", "-o", help="Change default output path."),
            pretty: bool = typer.Option(False, "--pretty", help="CLI becomes more modern with colours, text boxes, previews becomes more readable and more.")):
        
        set_logger(FormatterLogger(disable_log, pretty))
 
-       process_file(filepath, check, dry_run, pretty, in_place, file_type)
+       process_file(filepath, dir_output, check, dry_run, pretty, in_place, file_type)

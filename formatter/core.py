@@ -1,7 +1,7 @@
 from formatter.registry import get_formatter
 from formatter.utils import print_error, get_extension
 
-def process_file(filepath: str, is_checking: bool = False, is_dry_run: bool = False, is_pretty: bool = False, in_place: bool = False, file_type:str = None):
+def process_file(filepath: str, dir_output:str = None, is_checking: bool = False, is_dry_run: bool = False, is_pretty: bool = False, in_place: bool = False, file_type:str = None):
     
     if file_type != None:
         formatter_class = get_formatter(file_type)
@@ -18,4 +18,4 @@ def process_file(filepath: str, is_checking: bool = False, is_dry_run: bool = Fa
     if (is_dry_run):
         formatter.dry_run()
     if (not is_checking and not is_dry_run):
-        formatter.format(in_place)
+        formatter.format(dir_output, in_place)

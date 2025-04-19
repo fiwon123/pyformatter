@@ -73,7 +73,7 @@ class BaseFormatter(ABC):
         return True
         
 
-    def format(self, in_place):
+    def format(self, dir_output, in_place):
         print_msg(f"Formatting {self.get_format_name()}...")
 
         try:
@@ -88,9 +88,13 @@ class BaseFormatter(ABC):
         if (in_place):
             output = self.filepath
         else:
-            output = get_dir_path(self.filepath)
-            output = join_paths(output, "output")
-            create_dir(output)
+            if (dir_output != None):
+                output = dir_output
+                create_dir(output)
+            else:
+                output = get_dir_path(self.filepath)
+                output = join_paths(output, "output")
+                create_dir(output)
             
             output = join_paths(output, get_file_name(self.filepath) + "_formatted" + self.get_format_extension())
 
