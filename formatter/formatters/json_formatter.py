@@ -2,7 +2,6 @@ from formatter.formatters.base_formatter import BaseFormatter
 from formatter.registry import register_formatter
 import json
 
-
 @register_formatter("json")
 class JsonFormatter(BaseFormatter):
     def _serialize(self, content, indent = 4, separators=...):

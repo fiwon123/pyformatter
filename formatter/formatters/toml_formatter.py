@@ -3,7 +3,6 @@ from formatter.registry import register_formatter
 from tomli_w import dumps
 import toml
 
-
 @register_formatter("toml")
 class TomlFormatter(BaseFormatter):
     def _serialize(self, content, indent = 4, separators=...):

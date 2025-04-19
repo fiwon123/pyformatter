@@ -2,7 +2,6 @@ from formatter.formatters.base_formatter import BaseFormatter
 from formatter.registry import register_formatter
 import yaml
 
-
 @register_formatter("yaml")
 class YamlFormatter(BaseFormatter):
     def _serialize(self, content, indent = 4, separators=...):

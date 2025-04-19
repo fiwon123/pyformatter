@@ -61,6 +61,8 @@ class BaseFormatter(ABC):
                 content = self._deserialize(file)
         except Exception as e:
             print_error(f"Invalid {self.get_format_name()}: {e}")
+
+        print_msg(f"Deserialized {self.get_format_name()} file.")
             
         default_comma = ", "
         default_colon = " : "
