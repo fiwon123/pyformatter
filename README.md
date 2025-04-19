@@ -22,12 +22,35 @@ pip install -e .
 
 ## 📁 Project Structure
 ```text
-mytool/
-├── mytool/             # Main package
-│   └── __main__.py     # Entry point
-├── tests/              # Unit tests
-├── pyproject.toml      # Project metadata
-└── README.md
+formatter-project/
+├── formatter/                  # Main package
+│   ├── formatters/
+│   │   ├── base_formatter.py   
+│   │   ├── json_formatter.py
+│   │   ├── toml_formatter.py
+│   │   ├── xml_formatter.py
+│   │   └── yaml.formatter.py
+│   ├──__init__.py              # Import formatters scripts
+│   ├──__main__.py              # Use as a module
+│   ├── cli.py                  # Entry point
+│   ├── core.py                 # Proecess inputs
+│   ├── formatter_logger.py    
+│   ├── globals.py            
+│   ├── registry.py             # Register all formatters to use in package
+│   └── utils.py                # Used to manipulate string path, print and more
+├── tests/                      # Unit tests
+|   ├── tests_json/
+│   ├── tests_toml/
+│   ├── tests_xml/
+│   ├── tests_yaml/
+│   ├── test_json.py
+│   ├── test_toml.py
+│   ├── test_xml.py
+│   └── test_yaml.py
+├── LICENSE     
+├── CHANGELOG.md
+├── README.md
+└── pyproject.toml              # Project metadata
 ```
 
 
