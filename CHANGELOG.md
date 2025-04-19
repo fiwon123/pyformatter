@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 ### Added
 - Auto-Detect file extension before processing it. 
-- Formatting JSON/YAML file from one line to multiple-lines.
+- Formatting JSON/YAML/XML/TOML files.
 - Logging support for debug and info levels.
 
 <!-- ### Changed

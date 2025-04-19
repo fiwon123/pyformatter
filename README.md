@@ -1,6 +1,6 @@
 # formatter
 
-A simple command-line utility to format JSON and YAML files using Python and Typer.
+A simple command-line utility to format some files using Python and Typer. (.json, .yaml, .xml, .toml, ...)
 
 ## Features
 - Pretty-print JSON and YAML
