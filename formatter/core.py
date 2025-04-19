@@ -1,24 +1,17 @@
+from formatter.registry import get_formatter
 from formatter.utils import print_error, get_extension
-from formatter import format_json, check_json, format_yaml, check_yaml, dry_run_json, dry_run_yaml
 
 def process_file(filepath: str, is_checking: bool = False, is_dry_run: bool = False, is_pretty: bool = False):
-    extension = get_extension(filepath)     
+    formatter_class = get_formatter(get_extension(filepath)[1:])
 
-    match (extension):
-        case ".json":
-            if (is_checking):
-                check_json(filepath)
-            if (is_dry_run):
-                dry_run_json(filepath)
-            if (not is_checking and not is_dry_run):
-                format_json(filepath)
-        case ".yaml":
-            if (is_checking):
-                check_yaml(filepath)
-            if (is_dry_run):
-                dry_run_yaml(filepath)
-            if (not is_checking and not is_dry_run):
-                format_yaml(filepath)
-        case _:
-            print_error("Invalid input file")
-        
+    if (formatter_class == None):
+        print_error("Invalid input file.")
+
+    formatter = formatter_class(filepath)
+
+    if (is_checking):
+        formatter.check()
+    if (is_dry_run):
+        formatter.dry_run()
+    if (not is_checking and not is_dry_run):
+        formatter.format()

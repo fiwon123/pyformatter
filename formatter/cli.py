@@ -1,3 +1,4 @@
+from formatter import yaml_formatter, json_formatter
 import typer
 from formatter.core import process_file
 from formatter.logger import init_logger
