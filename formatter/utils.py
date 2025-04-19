@@ -3,12 +3,22 @@ from pathlib import Path
 import typer
 from rich.console import Console
 from rich.panel import Panel
+from formatter.logger import save_log
 
 console = Console()
 
-def error(msg: str):
-    typer.echo(msg, err=True)
+def print_error(msg: str):
+    typer.echo(f"❌ [ERROR] {msg}", err=True)
+    save_log(f"[ERROR] {msg}")
     raise typer.Exit(1)
+
+def print_msg(msg: str, enable_icon: bool = False):
+    if enable_icon:
+        typer.echo(f"✅ {msg}")
+    else:
+        typer.echo(msg)
+
+    save_log(msg)
 
 def error_box(message: str):
     console.print(Panel(message, title="[red]Error[/red]", border_style="red"))
@@ -37,4 +47,4 @@ def dir_path(filepath: str):
         return filepath
     else:
         error_box("Missing argument '[bold red]FILEPATH[/]'.")
-        error(f"❌ File '{filepath}' not found.")
+        print_error(f"File '{filepath}' not found.")

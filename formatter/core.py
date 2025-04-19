@@ -1,6 +1,5 @@
-from formatter.utils import error, get_extension
+from formatter.utils import print_error, get_extension
 from formatter import format_json, format_yaml
-
 
 def process_file(filepath: str):
     extension = get_extension(filepath)     
@@ -11,5 +10,5 @@ def process_file(filepath: str):
         case ".yaml":
             format_yaml(filepath)
         case _:
-            error("❌ Invalid input file")
+            print_error("Invalid input file")
         

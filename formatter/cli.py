@@ -1,13 +1,12 @@
 import typer
 from formatter.core import process_file
-from formatter.logger import get_logger
+from formatter.logger import init_logger
+from formatter.utils import print_msg
 
 app = typer.Typer()
 
 @app.command()
 def format(filepath: str = typer.Argument(..., help="Path to the YAML or JSON file to format."),
-           save_log: bool = typer.Argument(False, help="Save all logs while formatting the file.")):
-    log = get_logger("logger", save_log)
-    log.info("Formatting started")
-
+           disable_log: bool = typer.Option(False, "--disable-log", help="Disable all logs while formatting the file.")):
+    init_logger(disable_log)
     process_file(filepath)
