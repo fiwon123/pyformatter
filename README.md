@@ -3,10 +3,10 @@
 A simple command-line utility to format some files using Python and Typer. (.json, .yaml, .xml, .toml, ...)
 
 ## ✨ Features
-- Pretty-print JSON and YAML
-- Supports single or multiple files
-- Clean output using Rich
-- Simple CLI interface
+- Pretty-print.
+- Supports single or multiple files.
+- Clean output using Rich.
+- Simple CLI interface.
 
 ## 🚀 Installation
 ```bash
@@ -19,6 +19,16 @@ pip install -e .
 ```
 
 ## 🛠 Usage
+Use this following command to formmat any file available in the package:
+```bash
+formatter FILE_PATH
+```
+
+Use this command to list all availables parameters:
+```bash
+formatter --help
+```
+
 
 ## 📁 Project Structure
 ```text
