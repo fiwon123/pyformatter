@@ -5,7 +5,7 @@ description = "A CLI tool to format files. (Supported extensions: .json, .yaml, 
 authors = [{name = "Felipe Seiji Inoue", email="felipeinoue@yahoo.com.br"}]
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 dependencies = [
     "typer[all]",
     "rich",
