@@ -1,0 +1,10 @@
+active: true
+address:
+    city: Chicago
+    street: 847 Oakwood Dr
+    zip: '60601'
+email: john.doe@example.com
+id: 4
+name: John Doe
+roles:
+- admin

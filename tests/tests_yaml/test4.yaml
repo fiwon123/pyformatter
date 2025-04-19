@@ -1,0 +1,9 @@
+id: 4
+name: "John Doe"
+email: "john.doe@example.com"
+active: true
+roles: [admin]
+address: 
+  street: "847 Oakwood Dr"
+  city: "Chicago"
+  zip: "60601"

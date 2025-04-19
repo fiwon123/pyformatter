@@ -1,0 +1,10 @@
+active: false
+address:
+    city: Columbus
+    street: 1200 Maple St
+    zip: '43215'
+email: david.williams@example.com
+id: 2
+name: David Williams
+roles:
+- viewer

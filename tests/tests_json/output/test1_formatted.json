@@ -1,0 +1,14 @@
+{
+    "id" : 4, 
+    "name" : "John Doe", 
+    "email" : "john.doe@example.com", 
+    "address" : {
+        "street" : "847 Oakwood Dr", 
+        "city" : "Chicago", 
+        "zip" : "60601"
+    }, 
+    "is_active" : true, 
+    "roles" : [
+        "admin"
+    ]
+}

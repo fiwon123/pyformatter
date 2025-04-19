@@ -1,0 +1,14 @@
+<config>
+  <id>4</id>
+  <name>John Doe</name>
+  <email>john.doe@example.com</email>
+  <active>true</active>
+  <roles>
+    <role>admin</role>
+  </roles>
+  <address>
+    <street>847 Oakwood Dr</street>
+    <city>Chicago</city>
+    <zip>60601</zip>
+  </address>
+</config>

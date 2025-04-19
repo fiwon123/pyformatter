@@ -1,0 +1,5 @@
+id = 3
+name    =  "Jessica Carter" 
+email  = "jessica.carter@example.com" active = true 
+roles = [ "editor", "viewer" ] 
+address = { street = "950 Pine Ave", city = "Los Angeles" , zip = "90001" }

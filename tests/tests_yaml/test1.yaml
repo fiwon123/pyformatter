@@ -1,0 +1,9 @@
+id: 1
+name: "Sarah Allen"
+email: "sarah.allen@example.com"
+active: true
+roles: [admin, editor]
+address:
+  street: "2038 Briarwood Ln"
+  city: "Springfield"
+  zip: "62704"

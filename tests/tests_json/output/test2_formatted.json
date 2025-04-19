@@ -1,0 +1,14 @@
+{
+    "id" : 2, 
+    "name" : "David Williams", 
+    "email" : "david.williams@example.com", 
+    "active" : false, 
+    "roles" : [
+        "viewer"
+    ], 
+    "address" : {
+        "street" : "1200 Maple St", 
+        "city" : "Columbus", 
+        "zip" : "43215"
+    }
+}

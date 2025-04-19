@@ -1,0 +1,11 @@
+active: true
+address:
+    city: Springfield
+    street: 2038 Briarwood Ln
+    zip: '62704'
+email: sarah.allen@example.com
+id: 1
+name: Sarah Allen
+roles:
+- admin
+- editor

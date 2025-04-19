@@ -3,7 +3,7 @@ from formatter.registry import get_formatter
 from formatter.utils import print_error, get_extension, print_msg
 
 def process_file(filepath: str, dir_output:str = None, is_checking: bool = False, is_dry_run: bool = False, is_pretty: bool = False, in_place: bool = False, file_type:str = None):
-    
+    print_msg("-------------------------------------")
     print_msg("Verifying filepath...")
     if file_type != None:
         formatter_class = get_formatter(file_type)

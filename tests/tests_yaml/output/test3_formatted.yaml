@@ -1,0 +1,11 @@
+active: true
+address:
+    city: Los Angeles
+    street: 950 Pine Ave
+email: jessica.carter@example.com
+id: 3
+name: Jessica Carter
+roles:
+- editor
+- viewer
+zip: '90001'

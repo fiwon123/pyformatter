@@ -1,0 +1,15 @@
+<config>
+  <id>3</id>
+  <name>Jessica Carter</name>
+  <email>jessica.carter@example.com</email>
+  <active>true</active>
+  <roles>
+    <role>editor</role>
+    <role>viewer</role>
+  </roles>
+  <address>
+    <street>950 Pine Ave</street>
+    <city>Los Angeles</city>
+    <zip>90001</zip>
+  </address>
+</config>

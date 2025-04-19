@@ -1,0 +1,8 @@
+{
+    "id":5,
+    "name":"Emily Davis",
+    "email":"emily.davis@example.com","active":false,
+    "roles":["guest"],
+    "address":{"street":"290 Elm St","city":"Miami","zip":"33101"}
+    }
+    
