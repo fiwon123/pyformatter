@@ -1,3 +1,4 @@
+from rich.logging import RichHandler
 import datetime
 import logging
 from formatter.globals import log, configs
@@ -12,15 +13,21 @@ def save_log(msg: str):
 def get_logger():
     return log
 
-def init_logger(disable_log: bool = False):
+def init_logger(disable_log: bool = False, pretty: bool = False):
     from formatter.utils import get_path
-    from formatter.globals import log
+    global log
 
     if log != None:
         return log
 
-    log = logging.getLogger("log")
+    if pretty:
+        logging.basicConfig(level=logging.INFO, handlers=[RichHandler()])
+        log = logging.getLogger("rich")
+    else:
+        log = logging.getLogger("log")
 
+    print(log)
+    
     formatter = logging.Formatter(
         "%(asctime)s - %(levelname)s - %(message)s"
     )

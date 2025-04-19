@@ -16,5 +16,5 @@ def format(filepath: str = typer.Argument(..., help="Path to the YAML or JSON fi
     configs["check"] = check
     configs["pretty"] = pretty
 
-    init_logger(disable_log)
+    init_logger(disable_log, pretty)
     process_file(filepath, check, dry_run, pretty)
