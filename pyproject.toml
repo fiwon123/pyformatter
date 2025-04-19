@@ -10,8 +10,11 @@ dependencies = [
     "pyyaml"
 ]
 
+[tool.setuptools]
+packages = ["formatter"]
+
 [project.scripts]
-formatter = "formatter.main:app"
+formatter = "formatter.cli:app"
 
 [build-system]
 requires = ["setuptools", "wheel"]
