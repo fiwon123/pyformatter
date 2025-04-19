@@ -1,8 +1,7 @@
-from formatter import yaml_formatter, json_formatter
 import typer
 from formatter.core import process_file
-from formatter.logger import init_logger
-from formatter.globals import configs
+from formatter.formatter_logger import FormatterLogger
+from formatter.globals import set_logger
 
 app = typer.Typer()
 
@@ -12,10 +11,7 @@ def format(filepath: str = typer.Argument(..., help="Path to the YAML or JSON fi
            check:bool = typer.Option(False, "--check", help="Check if current file is already formatted."),
            dry_run:bool = typer.Option(False, "--dry-run", help="Show a preview in the CLI without generate an output file."),
            pretty: bool = typer.Option(False, "--pretty", help="CLI becomes more modern with colours, text boxes, previews becomes more readable and more.")):
-    configs["disable-logs"] = disable_log
-    configs["dry-run"] = dry_run
-    configs["check"] = check
-    configs["pretty"] = pretty
+       
+       set_logger(FormatterLogger(disable_log, pretty))
 
-    init_logger(disable_log, pretty)
-    process_file(filepath, check, dry_run, pretty)
+       process_file(filepath, check, dry_run, pretty)

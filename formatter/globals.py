@@ -1,9 +1,10 @@
-import logging
+from formatter.formatter_logger import FormatterLogger
 
-log:logging.Logger = None
-configs = {
-    "disable-log": False,
-    "dry-run": False,
-    "check": False,
-    "pretty": False
-}
+formatter_logger:FormatterLogger = None
+
+def set_logger(logger):
+    global formatter_logger
+    formatter_logger = logger
+
+def get_logger():
+    return formatter_logger
