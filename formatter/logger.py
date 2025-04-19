@@ -1,36 +1,26 @@
 import datetime
 import logging
-
-log:logging.Logger = None
-disable = False
+from formatter.globals import log, configs
 
 def save_log(msg: str):
-    global log
-    global disable
-
-    if log == None or disable:
+    if log == None or configs["disable-log"]:
         return
     
     log.info(msg)
 
 
 def get_logger():
-    global log
     return log
 
 def init_logger(disable_log: bool = False):
     from formatter.utils import get_path
-    global log
-    global disable
-
-    disable = disable_log
+    from formatter.globals import log
 
     if log != None:
         return log
 
     log = logging.getLogger("log")
 
-    # handler = logging.StreamHandler()
     formatter = logging.Formatter(
         "%(asctime)s - %(levelname)s - %(message)s"
     )

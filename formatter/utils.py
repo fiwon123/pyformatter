@@ -12,6 +12,10 @@ def print_error(msg: str):
     save_log(f"[ERROR] {msg}")
     raise typer.Exit(1)
 
+def print_warning(msg: str):
+    typer.echo(f"⚠️  [WARNING] {msg}")
+    save_log(f"[WARNING] {msg}")
+
 def print_msg(msg: str, enable_icon: bool = False):
     if enable_icon:
         typer.echo(f"✅ {msg}")
