@@ -82,6 +82,7 @@ class BaseFormatter(ABC):
         except Exception as e:
             print_error(f"Invalid {self.get_format_name()}: {e}")
             
+        print_msg(f"Deserialized {self.get_format_name()} file.")
         default_comma = ", "
         default_colon = " : "
 
@@ -91,10 +92,12 @@ class BaseFormatter(ABC):
             if (dir_output != None):
                 output = dir_output
                 create_dir(output)
+                print_msg(f"Created output folder {output}")
             else:
                 output = get_dir_path(self.filepath)
                 output = join_paths(output, "output")
                 create_dir(output)
+                print_msg(f"Created output folder {output}")
             
             output = join_paths(output, get_file_name(self.filepath) + "_formatted" + self.get_format_extension())
 

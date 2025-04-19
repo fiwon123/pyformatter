@@ -1,0 +1,6 @@
+<note>
+  <to>test</to>
+  <from>test</from>
+  <heading>Reminder</heading>
+  <body>Don't forget to test your formatter with XML!</body>
+</note>

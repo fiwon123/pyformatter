@@ -1,0 +1,29 @@
+[project]
+name = "formatter-project"
+version = "0.1.0"
+description = "A CLI tool to format files. (Supported extensions: .json, .yaml, ...)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "typer[all]",
+    "rich",
+    "pyyaml",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.scripts]
+formatter = "formatter.cli:app"
+
+[tool.setuptools]
+packages = [
+    "formatter",
+]
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"

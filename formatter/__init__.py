@@ -1,1 +1,1 @@
-from formatter.formatters import yaml_formatter, json_formatter
+from formatter.formatters import yaml_formatter, json_formatter, xml_formatter, toml_formatter
