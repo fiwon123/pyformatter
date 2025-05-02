@@ -1,4 +1,4 @@
-# 💬 About
+# 🔍 About
 
 A simple command-line utility to format some files using Python and Typer. (.json, .yaml, .xml, .toml, ...)
 
@@ -8,7 +8,7 @@ A simple command-line utility to format some files using Python and Typer. (.jso
 - Clean output using Rich.
 - Simple CLI interface.
 
-## 🚀 Installation
+## 📦 Installation
 ```bash
 pip install .
 ```
